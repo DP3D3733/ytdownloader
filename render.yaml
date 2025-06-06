@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: yt-downloader
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: '1'
